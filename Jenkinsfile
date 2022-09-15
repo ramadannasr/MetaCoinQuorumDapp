@@ -6,8 +6,8 @@ pipeline {
             steps {
                 nodejs('Node 16.x') {
                     ansiColor('css') {
-                        sh 'npm install'
-                        sh 'node_modules/.bin/truffle compile'
+                        bat 'npm install'
+                        bat 'node_modules/.bin/truffle compile'
                     }
                 }
             }
@@ -16,8 +16,8 @@ pipeline {
             steps {
                 nodejs('Node 16.x') {
                     ansiColor('vga') {
-                        sh 'npm install'
-                        sh 'node_modules/.bin/truffle test'
+                        bat 'npm install'
+                        bat 'node_modules/.bin/truffle test'
                     }
                 }
             }
