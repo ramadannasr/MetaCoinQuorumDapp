@@ -1,5 +1,5 @@
 {
-  "name": "metacoin_quorum_dapp",
+  "name": "simple_storage_quorum_dapp",
   "version": "1.0.0",
   "description": "",
   "main": "truffle-config.js",
