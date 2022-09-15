@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') { 
+        stage('Build SimpleStorage Quorum Dapp') {
             steps {
-                nodejs('Node 8.x') {
-                    ansiColor {
+                nodejs('latest') {
+                    ansiColor('css') {
                         sh 'npm install'
                         sh 'node_modules/.bin/truffle compile'
                     }
@@ -14,8 +14,8 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                nodejs('Node 8.x') {
-                    ansiColor {
+                nodejs('latest') {
+                    ansiColor('vga') {
                         sh 'npm install'
                         sh 'node_modules/.bin/truffle test'
                     }
