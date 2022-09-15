@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build SimpleStorage Quorum Dapp') {
             steps {
-                nodejs('latest') {
+                nodejs('Node 16.x') {
                     ansiColor('css') {
                         sh 'npm install'
                         sh 'node_modules/.bin/truffle compile'
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                nodejs('latest') {
+                nodejs('Node 16.x') {
                     ansiColor('vga') {
                         sh 'npm install'
                         sh 'node_modules/.bin/truffle test'
