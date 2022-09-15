@@ -1,25 +1,23 @@
 pipeline {
     agent any
-
+    tools{
+    nodejs '16.17.0'
+    }
     stages {
         stage('Build SimpleStorage Quorum Dapp') {
             steps {
-                nodejs('Node 16.x') {
                     ansiColor('css') {
                         bat 'npm install'
                         bat 'node_modules/.bin/truffle compile'
                     }
-                }
             }
         }
         stage('Test') { 
             steps {
-                nodejs('Node 16.x') {
                     ansiColor('vga') {
                         bat 'npm install'
                         bat 'node_modules/.bin/truffle test'
                     }
-                }
             }
         }
     }
