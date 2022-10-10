@@ -1,0 +1,9 @@
+httpUrl = "HTTPS://127.0.0.1:9102"
+tlsMode = "STRICT"
+tlsRootCA = "<!--http.tlsRootCA-->"
+tlsClientCert = "<!--http.tlsClientCert-->"
+tlsClientKey = "<!--http.tlsClientKey-->"
+timeout = 5
+httpIdleConnTimeout = 10
+httpWriteBufferSize = 4096
+httpReadBufferSize = 4096

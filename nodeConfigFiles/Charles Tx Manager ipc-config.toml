@@ -1,0 +1,4 @@
+socket = "tm.ipc"
+workdir = "path/to/ipc/file"
+timeout = 5
+dialTimeout = 1
